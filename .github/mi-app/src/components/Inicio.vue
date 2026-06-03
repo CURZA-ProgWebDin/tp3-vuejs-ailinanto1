@@ -66,7 +66,7 @@
                 <p>Precio Oferta: ${{ prods[2].precio / 2 }}</p>
                 <div v-if="expandido">
                     <p>Stock disponible: {{ prods[2].stock }} un.</p>
-                    <p>Código exclusivo: <span style="color: #00ffcc; font-weight: bold;">NEON50</span></p>
+                    <p>Código por tiempo limitado: <span style="color: #00ffcc; font-weight: bold;">NEON50</span></p>
                 </div>
             </template>
             <template #footer="{ expandido, toggleExpandir }">
