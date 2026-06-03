@@ -87,73 +87,64 @@ import { mdiCart, mdiLightningBolt } from '@mdi/js';
 
 const prods = productos;
 </script>
-<style scoped>
-/* Contenedor principal que alinea tus tres tarjetas en una fila horizontal */
+<style>
 .contenedor-columnas {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: flex-start;
     gap: 25px;
-    /* Espacio entre cada tarjeta */
     padding: 30px;
     width: 100%;
     box-sizing: border-box;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
-
-/* Forzamos a que las tarjetas usen el look oscuro de tu app y se repartan el ancho */
-.tarjeta-individual {
+.contenedor-columnas .tarjeta-individual {
     flex: 1;
     min-width: 280px;
     max-width: 360px;
-    background-color: #232329 !important;
-    /* El color oscuro de fondo */
-    border-radius: 12px !important;
-    padding: 20px !important;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4) !important;
-    border: none !important;
+    background-color: #232329 ; 
+    border-radius: 12px ;
+    padding: 20px ;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    border: none ;
 }
-
-/* Alineación interna de los textos y títulos */
-h3 {
+.contenedor-columnas h3 {
     color: #ffffff;
     font-weight: 700;
     text-align: center;
     margin-bottom: 8px;
     letter-spacing: 0.5px;
 }
-
-p {
+.contenedor-columnas p {
     color: #e2e8f0;
     font-size: 1rem;
     text-align: center;
     margin-top: 4px;
     margin-bottom: 12px;
 }
-
-/* Estilo para los rayos de la tercera tarjeta */
-.titulo-rayos {
+.contenedor-columnas .titulo-rayos {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 8px;
 }
-
-.icono-rayo {
+.contenedor-columnas .icono-rayo {
     color: #ff007f;
-    /* Los rayos ahora brillan en fucsia */
     filter: drop-shadow(0 0 5px rgba(255, 0, 127, 0.5));
 }
-
-/* Opcional: una sutil distinción de borde para la tarjeta destacada */
-.tarjeta-destacada {
-    border: 1px dashed rgba(255, 0, 127, 0.3) !important;
+.contenedor-columnas .tarjeta-destacada {
+    border: 1px dashed rgba(255, 0, 127, 0.3) ;
 }
-
-/* === DISEÑO DE TUS BOTONES ORIGINALES (Unificados) === */
-.btn-comprar,
-.btn-ver-mas {
+.contenedor-columnas .tarjeta-individual footer span {
+    display: block;
+    text-align: center;
+    color: #555562;
+    font-size: 0.95rem;
+    padding: 15px 0 5px 0;
+}
+.contenedor-columnas .btn-comprar,
+.contenedor-columnas .btn-ver-mas {
     width: 100%;
     padding: 10px 16px;
     border-radius: 6px;
@@ -166,66 +157,46 @@ p {
     display: inline-block;
     text-align: center;
 }
-
-.btn-comprar {
+.contenedor-columnas .btn-comprar {
     background-color: #ff007f;
     color: #ffffff;
     border: 2px solid #ff007f;
     box-shadow: 0 4px 10px rgba(255, 0, 127, 0.3);
 }
-
-.btn-comprar:hover {
+.contenedor-columnas .btn-comprar:hover {
     background-color: #ffffff;
     color: #ff007f;
     border-color: #ff2a93;
     box-shadow: 0 0 15px rgba(255, 0, 127, 0.8);
     transform: translateY(-2px);
 }
-
-.btn-ver-mas {
+.contenedor-columnas .btn-ver-mas {
     background-color: rgba(255, 0, 127, 0.05);
     color: #ff007f;
     border: 2px solid #ff007f;
 }
-
-.btn-ver-mas:hover {
+.contenedor-columnas .btn-ver-mas:hover {
     background-color: #ffffff;
     color: #ff007f;
     border-color: #ffffff;
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
     transform: translateY(-2px);
 }
-
-.btn-comprar:active,
-.btn-ver-mas:active {
+.contenedor-columnas .btn-comprar:active,
+.contenedor-columnas .btn-ver-mas:active {
     transform: translateY(0);
 }
-
-/* === NUEVO ESTILO PARA EL BOTÓN DE CUPÓN (.btn-cupon) === */
-/* Eliminamos el turquesa y le damos un look que combina perfecto con el fucsia */
-.btn-cupon {
-    background-color: transparent !important;
-    color: #ff007f !important;
-    border: 2px dashed #ff007f !important;
-    /* Borde discontinuo para denotar que es un cupón troquelado */
-    box-shadow: none !important;
+.contenedor-columnas .btn-cupon {
+    background-color: transparent ;
+    color: #ff007f ;
+    border: 2px dashed #ff007f ;
+    box-shadow: none ;
 }
-
-.btn-cupon:hover {
-    background-color: #ff007f !important;
-    color: #ffffff !important;
-    border-style: solid !important;
-    box-shadow: 0 0 15px rgba(255, 0, 127, 0.6) !important;
+.contenedor-columnas .btn-cupon:hover {
+    background-color: #ff007f ;
+    color: #ffffff ;
+    border-style: solid ;
+    box-shadow: 0 0 15px rgba(255, 0, 127, 0.6);
     transform: translateY(-2px);
-}
-
-/* Centrado automático del texto "Sin acciones disponibles" del footer (Instancia 2) */
-:deep(footer span) {
-    display: block;
-    text-align: center;
-    color: #8a8a98;
-    font-size: 0.95rem;
-    font-style: italic;
-    padding: 10px 0;
 }
 </style>
